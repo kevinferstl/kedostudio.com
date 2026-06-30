@@ -32,9 +32,17 @@
 <meta name="ICBM" content="47.3229, 12.7942">
 <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
 <link rel="preload" href="../assets/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/video/hero-poster.jpg" as="image" fetchpriority="high">
+<link rel="dns-prefetch" href="https://formspree.io">
+<link rel="dns-prefetch" href="https://plausible.io">
 <link rel="stylesheet" href="../css/styles.css">
+<!-- Plausible Analytics (cookiefree, GDPR-friendly) -->
+<script defer data-domain="kedostudio.com" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -131,6 +139,7 @@
   <div class="m-foot"><a href="../">Deutsch</a><span>·</span><a href="https://www.instagram.com/kedo.studio/" target="_blank" rel="noopener">Instagram</a></div>
 </div>
 
+<main id="content">
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="hero">
   <div class="hero__media">
@@ -172,7 +181,7 @@
   <div class="wrap">
     <div class="vision">
       <div class="vision__media reveal">
-        <img src="../assets/img/studio-07.jpg" alt="Infinity wall at KEDO Studio Zell am See" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-07.webp" srcset="../assets/img/studio-07-800.webp 800w, ../assets/img/studio-07.webp 1800w" sizes="(max-width:760px) 100vw, 50vw" width="1800" height="1200" alt="Infinity wall at KEDO Studio Zell am See" loading="lazy" decoding="async">
         <span class="badge">Infinity Wall</span>
       </div>
       <div class="vision__body">
@@ -210,7 +219,7 @@
     </div>
     <div class="svc-grid">
       <article class="svc reveal">
-        <img src="../assets/img/work-02.jpg" alt="Photo shoot at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/work-02.webp" srcset="../assets/img/work-02-800.webp 800w, ../assets/img/work-02.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Photo shoot at KEDO Studio" loading="lazy" decoding="async">
         <div class="svc__body">
           <span class="svc__num">01</span>
           <h3>Photo &amp; Video Production</h3>
@@ -219,7 +228,7 @@
         </div>
       </article>
       <article class="svc reveal" data-d="1">
-        <img src="../assets/img/work-16.jpg" alt="Product photography at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/work-16.webp" srcset="../assets/img/work-16-800.webp 800w, ../assets/img/work-16.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Product photography at KEDO Studio" loading="lazy" decoding="async">
         <div class="svc__body">
           <span class="svc__num">02</span>
           <h3>Product Photography</h3>
@@ -228,7 +237,7 @@
         </div>
       </article>
       <article class="svc reveal" data-d="2">
-        <img src="../assets/img/studio-01.jpg" alt="Content and podcast area at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-01.webp" srcset="../assets/img/studio-01-800.webp 800w, ../assets/img/studio-01.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Content and podcast area at KEDO Studio" loading="lazy" decoding="async">
         <div class="svc__body">
           <span class="svc__num">03</span>
           <h3>Podcast &amp; Content Production</h3>
@@ -237,7 +246,7 @@
         </div>
       </article>
       <article class="svc reveal" data-d="3">
-        <img src="../assets/img/work-13.jpg" alt="Creative freedom at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/work-13.webp" srcset="../assets/img/work-13-800.webp 800w, ../assets/img/work-13.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Creative freedom at KEDO Studio" loading="lazy" decoding="async">
         <div class="svc__body">
           <span class="svc__num">04</span>
           <h3>Creative Freedom</h3>
@@ -276,32 +285,32 @@
     </div>
     <div class="equip-grid">
       <article class="eq eq--wide reveal">
-        <img src="../assets/img/equip-08.jpg" alt="Professional lighting at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/equip-08.webp" srcset="../assets/img/equip-08-800.webp 800w, ../assets/img/equip-08.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Professional lighting at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">01</span><h3>Lighting System</h3>
           <p>Softboxes, LED panels and flash systems for any desired mood. Precisely controllable – from soft portrait light to high-contrast staging.</p></div>
       </article>
       <article class="eq eq--tall reveal" data-d="1">
-        <img src="../assets/img/studio-08.jpg" alt="Infinity wall at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-08.webp" srcset="../assets/img/studio-08-800.webp 800w, ../assets/img/studio-08.webp 1800w" sizes="(max-width:760px) 100vw, 50vw" width="1800" height="1200" alt="Infinity wall at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">04</span><h3>Infinity Wall</h3>
           <p>A seamless background for clean, professional results. Ideal for product photography, portraits and commercial productions without distracting edges.</p></div>
       </article>
       <article class="eq eq--std reveal">
-        <img src="../assets/img/studio-04.jpg" alt="Props and furniture at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-04.webp" srcset="../assets/img/studio-04-800.webp 800w, ../assets/img/studio-04.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Props and furniture at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">02</span><h3>Props</h3>
           <p>A selection of furniture and decorative elements for free use. Adapt your setting individually to your concept.</p></div>
       </article>
       <article class="eq eq--std reveal" data-d="1">
-        <img src="../assets/img/studio-03.jpg" alt="Make-up area at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-03.webp" srcset="../assets/img/studio-03-800.webp 800w, ../assets/img/studio-03.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Make-up area at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">05</span><h3>Make-up Area</h3>
           <p>A professional make-up station with optimal lighting. Perfect for styling, preparation and final touch-ups.</p></div>
       </article>
       <article class="eq eq--std reveal" data-d="2">
-        <img src="../assets/img/studio-09.jpg" alt="Kitchenette at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-09.webp" srcset="../assets/img/studio-09-800.webp 800w, ../assets/img/studio-09.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Kitchenette at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">03</span><h3>Kitchenette</h3>
           <p>Seating for relaxed breaks, a fridge for your food and drinks. Coffee and water always free of charge.</p></div>
       </article>
       <article class="eq eq--full reveal">
-        <img src="../assets/img/studio-02.jpg" alt="Changing room at KEDO Studio" loading="lazy" decoding="async">
+        <img src="../assets/img/studio-02.webp" srcset="../assets/img/studio-02-800.webp 800w, ../assets/img/studio-02.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" width="1200" height="1800" alt="Changing room at KEDO Studio" loading="lazy" decoding="async">
         <div class="eq__body"><span class="eq__num">06</span><h3>Changing Room &amp; Wardrobe</h3>
           <p>A practical wardrobe for quick outfit changes. Sanitary facilities of course included – so everything runs smoothly on set.</p></div>
       </article>
@@ -314,8 +323,8 @@
   <div class="wrap">
     <div class="team">
       <div class="team__media reveal">
-        <div class="ph"><img src="../assets/img/team-01.jpg" alt="Anna and Selina – the KEDO team" loading="lazy" decoding="async"></div>
-        <div class="ph b"><img src="../assets/img/team-02.jpg" alt="Anna and Selina on set" loading="lazy" decoding="async"></div>
+        <div class="ph"><img src="../assets/img/team-01.webp" srcset="../assets/img/team-01-800.webp 800w, ../assets/img/team-01.webp 1000w" sizes="(max-width:760px) 100vw, 50vw" width="1000" height="1500" alt="Anna and Selina – the KEDO team" loading="lazy" decoding="async"></div>
+        <div class="ph b"><img src="../assets/img/team-02.webp" srcset="../assets/img/team-02-800.webp 800w, ../assets/img/team-02.webp 1000w" sizes="(max-width:760px) 100vw, 50vw" width="1000" height="1500" alt="Anna and Selina on set" loading="lazy" decoding="async"></div>
       </div>
       <div class="team__body">
         <span class="eyebrow reveal">This is us</span>
@@ -500,6 +509,7 @@
   </div>
 </section>
 
+</main>
 <!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="wrap">

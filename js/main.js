@@ -106,7 +106,10 @@
       fig.className = "g-item" + (i >= INITIAL ? " is-hidden" : "");
       fig.setAttribute("data-i", i);
       fig.innerHTML =
-        '<img src="' + BASE + 'assets/img/' + g.n + '.jpg" alt="' + g.c + ' – KEDO Studio" loading="lazy" decoding="async">' +
+        '<img src="' + BASE + 'assets/img/' + g.n + '.webp" ' +
+        'srcset="' + BASE + 'assets/img/' + g.n + '-800.webp 800w, ' + BASE + 'assets/img/' + g.n + '.webp 1200w" ' +
+        'sizes="(max-width:540px) 50vw, (max-width:900px) 33vw, 300px" width="1200" height="1800" ' +
+        'alt="' + g.c + ' – KEDO Studio" loading="lazy" decoding="async">' +
         '<span class="g-plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>';
       fig.addEventListener("click", function () { openLb(i); });
       gallery.appendChild(fig);
@@ -132,7 +135,7 @@
   function showLb(i) {
     cur = (i + galleryData.length) % galleryData.length;
     var g = galleryData[cur];
-    lbImg.src = BASE + "assets/img/" + g.n + ".jpg";
+    lbImg.src = BASE + "assets/img/" + g.n + ".webp";
     lbImg.alt = g.c;
     lbCount.textContent = (cur + 1) + " " + t.of + " " + galleryData.length;
   }
@@ -269,10 +272,12 @@
         (lang === "en" ? "Preferred date: " : "Wunschtermin: ") + (date || "-") + "\n\n" +
         (lang === "en" ? "Project: " : "Projekt: ") + "\n" + (msg || "-");
 
+      function track() { if (window.plausible) window.plausible("Buchungsanfrage"); }
       function mailtoFallback() {
         window.location.href = "mailto:" + MAIL + "?subject=" +
           encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         if (ok) ok.classList.add("show");
+        track();
       }
 
       var endpoint = form.getAttribute("data-endpoint") || "";
@@ -287,6 +292,7 @@
           if (r.ok) {
             form.reset();
             if (ok) { ok.classList.add("show"); ok.scrollIntoView({ behavior: "smooth", block: "center" }); }
+            track();
           } else { mailtoFallback(); }
         })
         .catch(mailtoFallback)
