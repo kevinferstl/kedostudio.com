@@ -67,10 +67,10 @@
 
   /* ---------- GALLERY ---------- */
   var galleryData = [
-    { n: "work-01", c: "Black & White · Emotion" },
+    { n: "work-01", c: "Black & White · Emotion", land: true },
     { n: "work-02", c: "Fashion Editorial · Red Light" },
     { n: "work-03", c: "Mirrored Portrait" },
-    { n: "work-04", c: "Authentic Couple · B&W" },
+    { n: "work-04", c: "Authentic Couple · B&W", land: true },
     { n: "work-05", c: "Lifestyle Portrait" },
     { n: "work-06", c: "Behind the Scenes" },
     { n: "work-07", c: "Artist Press Portrait" },
@@ -80,7 +80,7 @@
     { n: "work-11", c: "Conceptual Realism" },
     { n: "work-12", c: "Contemporary Studio" },
     { n: "work-13", c: "Konfetti · Behind the Scenes" },
-    { n: "work-14", c: "Intimate & Contemporary" },
+    { n: "work-14", c: "Intimate & Contemporary", land: true },
     { n: "work-15", c: "Timeless Portrait · B&W" },
     { n: "work-16", c: "Produktfotografie · Parfum" },
     { n: "work-17", c: "Sonnenbrillen · Portrait" },
@@ -105,10 +105,11 @@
       var fig = document.createElement("figure");
       fig.className = "g-item" + (i >= INITIAL ? " is-hidden" : "");
       fig.setAttribute("data-i", i);
+      var iw = g.land ? 1800 : 1200, ih = g.land ? 1200 : 1800;
       fig.innerHTML =
         '<img src="' + BASE + 'assets/img/' + g.n + '.webp" ' +
         'srcset="' + BASE + 'assets/img/' + g.n + '-800.webp 800w, ' + BASE + 'assets/img/' + g.n + '.webp 1200w" ' +
-        'sizes="(max-width:540px) 50vw, (max-width:900px) 33vw, 300px" width="1200" height="1800" ' +
+        'sizes="(max-width:540px) 50vw, (max-width:900px) 33vw, 300px" width="' + iw + '" height="' + ih + '" ' +
         'alt="' + g.c + ' – KEDO Studio" loading="lazy" decoding="async">' +
         '<span class="g-plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>';
       fig.addEventListener("click", function () { openLb(i); });

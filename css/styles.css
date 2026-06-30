@@ -236,7 +236,7 @@ h1,h2,h3,h4,p{margin:0}
 .gallery__head{margin-bottom:clamp(2rem,5vw,3.5rem)}
 .masonry{columns:3;column-gap:14px}
 .masonry .g-item{break-inside:avoid;margin-bottom:14px;position:relative;overflow:hidden;border-radius:var(--radius);cursor:pointer;background:var(--ink-soft)}
-.masonry .g-item img{width:100%;transition:transform 1.2s var(--ease)}
+.masonry .g-item img{display:block;width:100%;height:auto;transition:transform 1.2s var(--ease)}
 .masonry .g-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,10,10,.7));opacity:0;transition:opacity .5s}
 .masonry .g-item .g-plus{position:absolute;right:14px;bottom:14px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--ink);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(8px) scale(.8);transition:all .5s var(--ease);z-index:2}
 .masonry .g-item:hover img{transform:scale(1.06)}
