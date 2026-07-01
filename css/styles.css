@@ -39,7 +39,7 @@
 
 /* ---------- Reset ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;font-family:var(--f-body);background:var(--paper);color:var(--ink);
@@ -151,6 +151,11 @@ h1,h2,h3,h4,p{margin:0}
 .nav.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav.menu-open .burger span:nth-child(2){opacity:0}
 .nav.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* mobile: Hamburger statt Inline-Menü */
+@media (max-width:860px){
+  .nav__menu,.lang,.nav__cta{display:none}
+  .burger{display:block}
+}
 
 /* mobile overlay */
 .mobile-menu{position:fixed;inset:0;background:var(--ink);z-index:55;display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut);
@@ -228,7 +233,7 @@ h1,h2,h3,h4,p{margin:0}
 .svc .tags span{font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:.35em .8em;border-radius:100px}
 .svc:hover p{max-height:200px;opacity:1}
 @media (hover:none){.svc p{max-height:200px;opacity:1}}
-@media (max-width:760px){.svc-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.svc-grid{grid-template-columns:1fr}.svc p{max-height:none;opacity:1}.svc h3{overflow-wrap:break-word;hyphens:auto}}
 
 /* =====================================================================
    GALLERY / WORK
@@ -271,7 +276,7 @@ h1,h2,h3,h4,p{margin:0}
 .eq:hover img{transform:scale(1.07)}
 .eq__body{padding:1.3rem 1.4rem}
 .eq__num{display:none}
-.eq h3{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:1.25rem;margin-top:.5rem;letter-spacing:-.01em;line-height:1.02}
+.eq h3{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:1.25rem;margin-top:.5rem;letter-spacing:-.01em;line-height:1.02;overflow-wrap:break-word;hyphens:auto}
 .eq p{font-size:.86rem;color:#d9d7cf;margin-top:.5rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .5s,margin .5s}
 .eq:hover p{max-height:160px;opacity:1}
 @media (hover:none){.eq p{max-height:160px;opacity:1}}
@@ -280,7 +285,7 @@ h1,h2,h3,h4,p{margin:0}
 .eq--tall{grid-column:span 3}
 .eq--std{grid-column:span 2}
 @media (max-width:1000px){.equip-grid{grid-template-columns:repeat(4,1fr)}.eq--wide,.eq--tall{grid-column:span 2}.eq--std{grid-column:span 2}}
-@media (max-width:620px){.equip-grid{grid-template-columns:1fr 1fr}.eq--wide,.eq--tall,.eq--std{grid-column:span 1}.eq{min-height:200px}}
+@media (max-width:620px){.equip-grid{grid-template-columns:1fr}.eq--wide,.eq--tall,.eq--std{grid-column:span 1}.eq{min-height:300px}.eq p{max-height:none;opacity:1}}
 
 /* =====================================================================
    TEAM
@@ -408,7 +413,7 @@ h1,h2,h3,h4,p{margin:0}
 .socials{display:flex;gap:.8rem}
 .socials a{width:38px;height:38px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,border-color .3s}
 .socials a:hover{background:var(--accent);color:var(--ink);border-color:var(--accent)}
-@media (max-width:760px){.footer__grid{grid-template-columns:1fr;gap:2.4rem}}
+@media (max-width:760px){.footer__grid{grid-template-columns:1fr;gap:2.4rem}.footer__bottom{padding-bottom:calc(1.8rem + 76px + env(safe-area-inset-bottom,0))}}
 
 /* =====================================================================
    COOKIE
