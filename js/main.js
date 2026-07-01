@@ -67,34 +67,31 @@
 
   /* ---------- GALLERY ---------- */
   var galleryData = [
-    { n: "work-01", c: "Black & White · Emotion", land: true },
-    { n: "work-02", c: "Fashion Editorial · Red Light" },
-    { n: "work-03", c: "Mirrored Portrait" },
-    { n: "work-04", c: "Authentic Couple · B&W", land: true },
-    { n: "work-05", c: "Lifestyle Portrait" },
-    { n: "work-06", c: "Behind the Scenes" },
-    { n: "work-07", c: "Artist Press Portrait" },
-    { n: "work-08", c: "Babybauch · B&W" },
-    { n: "work-09", c: "Movement · Dance" },
-    { n: "work-10", c: "Expressive Dance · B&W" },
-    { n: "work-11", c: "Conceptual Realism" },
-    { n: "work-12", c: "Contemporary Studio" },
-    { n: "work-13", c: "Konfetti · Behind the Scenes" },
-    { n: "work-14", c: "Intimate & Contemporary", land: true },
-    { n: "work-15", c: "Timeless Portrait · B&W" },
-    { n: "work-16", c: "Produktfotografie · Parfum" },
-    { n: "work-17", c: "Sonnenbrillen · Portrait" },
-    { n: "work-18", c: "Editorial Portrait" },
-    { n: "work-19", c: "Commercial Product Shot" },
-    { n: "work-20", c: "Neo-cinematic · Light" },
-    { n: "work-21", c: "Cinematic & Timeless" },
-    { n: "work-22", c: "Inside the Studio" },
-    { n: "work-23", c: "Expressive Art" },
-    { n: "work-24", c: "Conceptual · Blue Light" },
-    { n: "work-25", c: "Set-up · Behind the Scenes" },
-    { n: "work-26", c: "Authentic Portrait" },
-    { n: "work-27", c: "Unternehmensportrait" },
-    { n: "work-28", c: "Veiled Portrait" }
+    { n: "ref-01", c: "Studio Portrait" },
+    { n: "ref-02", c: "Studio Portrait · Light", land: true },
+    { n: "ref-03", c: "A la Carte" },
+    { n: "ref-04", c: "Artist Press Portrait" },
+    { n: "ref-05", c: "Authentic Portrait" },
+    { n: "ref-06", c: "Babybauch" },
+    { n: "ref-07", c: "Baby Portrait" },
+    { n: "ref-08", c: "Cinematic & Timeless" },
+    { n: "ref-09", c: "Commercial Product Shot" },
+    { n: "ref-10", c: "Conceptual Realism" },
+    { n: "ref-11", c: "Contemporary Studio" },
+    { n: "ref-12", c: "Editorial Product Shot" },
+    { n: "ref-13", c: "Fashion Editorial" },
+    { n: "ref-14", c: "Inside the Studio" },
+    { n: "ref-15", c: "Intimate & Contemporary" },
+    { n: "ref-16", c: "Portrait · Red Light" },
+    { n: "ref-17", c: "Studio Portrait" },
+    { n: "ref-18", c: "Neo-cinematic" },
+    { n: "ref-19", c: "Pilates · Movement" },
+    { n: "ref-20", c: "Pilates · Studio" },
+    { n: "ref-21", c: "Behind the Scenes" },
+    { n: "ref-22", c: "Timeless Portrait" },
+    { n: "ref-23", c: "Portrait · B&W" },
+    { n: "ref-24", c: "Unternehmensportrait" },
+    { n: "ref-25", c: "Veiled Portrait" }
   ];
   var INITIAL = 12;
   var gallery = document.getElementById("gallery");
@@ -105,10 +102,10 @@
       var fig = document.createElement("figure");
       fig.className = "g-item" + (i >= INITIAL ? " is-hidden" : "");
       fig.setAttribute("data-i", i);
-      var iw = g.land ? 1800 : 1200, ih = g.land ? 1200 : 1800;
+      var iw = g.land ? 1600 : 1067, ih = g.land ? 1067 : 1600;
       fig.innerHTML =
         '<img src="' + BASE + 'assets/img/' + g.n + '.webp" ' +
-        'srcset="' + BASE + 'assets/img/' + g.n + '-800.webp 800w, ' + BASE + 'assets/img/' + g.n + '.webp 1200w" ' +
+        'srcset="' + BASE + 'assets/img/' + g.n + '-800.webp 800w, ' + BASE + 'assets/img/' + g.n + '.webp ' + iw + 'w" ' +
         'sizes="(max-width:540px) 50vw, (max-width:900px) 33vw, 300px" width="' + iw + '" height="' + ih + '" ' +
         'alt="' + g.c + ' – KEDO Studio" loading="lazy" decoding="async">' +
         '<span class="g-plus" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>';

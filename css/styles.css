@@ -224,7 +224,7 @@ h1,h2,h3,h4,p{margin:0}
 .svc__num{font-size:.72rem;font-weight:700;letter-spacing:.24em;color:var(--accent)}
 .svc h3{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1;margin:.7rem 0 .6rem;letter-spacing:-.01em}
 .svc p{font-size:.96rem;max-width:42ch;color:#e9e7df;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .5s var(--ease),margin .5s}
-.svc .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.svc .tags{display:none}
 .svc .tags span{font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:.35em .8em;border-radius:100px}
 .svc:hover p{max-height:200px;opacity:1}
 @media (hover:none){.svc p{max-height:200px;opacity:1}}
@@ -270,7 +270,7 @@ h1,h2,h3,h4,p{margin:0}
 .eq::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,10,.1) 35%,rgba(10,10,10,.88))}
 .eq:hover img{transform:scale(1.07)}
 .eq__body{padding:1.3rem 1.4rem}
-.eq__num{font-size:.7rem;font-weight:700;letter-spacing:.2em;color:var(--accent)}
+.eq__num{display:none}
 .eq h3{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:1.25rem;margin-top:.5rem;letter-spacing:-.01em;line-height:1.02}
 .eq p{font-size:.86rem;color:#d9d7cf;margin-top:.5rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .5s,margin .5s}
 .eq:hover p{max-height:160px;opacity:1}
